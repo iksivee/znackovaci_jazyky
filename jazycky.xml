@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurants>
+	<restaurant id="123">
+		<name>Rest</name>
+		<contact>
+			<phone>+420722688311</phone>
+			<email>info@rest.cz</email>
+			<website>www.rest.cz</website>
+		</contact>
+		<cuisine>italy</cuisine>
+		<pricing>300</pricing>
+		<capacity>48</capacity>
+		<smoke>false</smoke>
+		<pay_card>true</pay_card>
+		<pay_ticket>true</pay_ticket>
+		<about>Restaurace s italskou kuchyni.</about>
+		<open_hours format="24" data="days">
+			<weekday day="monday" open="true">
+				<from>10:00</from>
+				<to>22:00</to>
+			</weekday>
+			<weekday day="tuesday" open="true">
+				<from>10:00</from>
+				<to>22:00</to>
+			</weekday>
+			<weekday day="wednesday" open="true">
+				<from>10:00</from>
+				<to>22:00</to>
+			</weekday>
+			<weekday day="thursday" open="true">
+				<from>10:00</from>
+				<to>22:00</to>
+			</weekday>
+			<weekday day="friday" open="true">
+				<from>10:00</from>
+				<to>00:00</to>
+			</weekday>
+			<weekday day="saturday" open="true">
+				<from>10:00</from>
+				<to>23:00</to>
+			</weekday>
+			<weekday day="sunday" open="false">
+				<from></from>
+				<to></to>
+			</weekday>
+		</open_hours>
+		<address>
+			<street>Vrchlického 2341</street>
+			<town>Kladno</town>
+			<zip>27201</zip>
+			<country>Česká republika</country>
+			<map>
+				<lat>14.010611</lat>
+				<lng>51.641388</lng>
+			</map>
+		</address>
+		<rate restRate="average">
+			<avg_rate>4.12</avg_rate>
+			<rev_number>94</rev_number>
+		</rate>
+		<meal type="main">
+			<name>Pomalu pečený hovězí krk</name>
+			<price currency="CZK">299</price>
+			<rate mealRate="average">
+				<avg_rate>4.75</avg_rate>
+				<rev_number>3</rev_number>
+			</rate>
+			<review>
+				<user id="114">
+					<name>FrantaV</name>
+					<photo>/photos/114.jpg</photo>
+				</user>
+				<rate>4.0</rate>
+				<comment>Naprosto úžasné, pochutnal jsem si.</comment>
+			</review>
+			<review>
+				<user id="124">
+					<name>HonzaM</name>
+					<photo>/photos/124.jpg</photo>
+				</user>
+				<rate>5.0</rate>
+				<comment>Dokonalá večeře.</comment>
+			</review>
+			<review>
+				<user id="1554">
+					<name>KarolinaO</name>
+					<photo>/photos/1554.jpg</photo>
+				</user>
+				<rate>5.0</rate>
+				<comment>Lepší jídlo jsem nikdy nejedla, dokonale vychucené... doporučuji!</comment>
+			</review>
+		</meal>
+		<meal type="main">
+			<name>Salát Caesar</name>
+			<price currency="CZK">149</price>
+			<rate mealRate="average">
+				<avg_rate>0</avg_rate>
+				<rev_number>0</rev_number>
+			</rate>
+		</meal>
+		<meal type="starter">
+			<name>Tradiční česnečka</name>
+			<price currency="CZK">49</price>
+			<rate mealRate="average">
+				<avg_rate>0</avg_rate>
+				<rev_number>0</rev_number>
+			</rate>
+		</meal>
+	</restaurant>
+	<restaurant id="124">
+		<name>Ham</name>
+		<contact>
+			<phone>+420724688311</phone>
+			<email>info@ham.cz</email>
+			<website>www.ham.cz</website>
+		</contact>
+		<cuisine>czech</cuisine>
+		<pricing>200</pricing>
+		<capacity>40</capacity>
+		<smoke>true</smoke>
+		<pay_card>true</pay_card>
+		<pay_ticket>false</pay_ticket>
+		<about>Klasická česká hospůdka.</about>
+		<open_hours format="24" data="days">
+			<weekday day="monday" open="true">
+				<from>11:00</from>
+				<to>20:00</to>
+			</weekday>
+			<weekday day="tuesday" open="true">
+				<from>10:00</from>
+				<to>22:00</to>
+			</weekday>
+			<weekday day="wednesday" open="true">
+				<from>09:00</from>
+				<to>20:00</to>
+			</weekday>
+			<weekday day="thursday" open="true">
+				<from>10:00</from>
+				<to>22:00</to>
+			</weekday>
+			<weekday day="friday" open="true">
+				<from>09:00</from>
+				<to>00:00</to>
+			</weekday>
+			<weekday day="saturday" open="false">
+				<from></from>
+				<to></to>
+			</weekday>
+			<weekday day="sunday" open="false">
+				<from></from>
+				<to></to>
+			</weekday>
+		</open_hours>
+		<address>
+			<street>Dubova 2641</street>
+			<town>Praha</town>
+			<zip>27211</zip>
+			<country>Česká republika</country>
+			<map>
+				<lat>15.010611</lat>
+				<lng>54.621388</lng>
+			</map>
+		</address>
+		<rate restRate="average">
+			<avg_rate>0</avg_rate>
+			<rev_number>0</rev_number>
+		</rate>
+		<meal type="starter">
+			<name>Rajská polévka</name>
+			<price currency="CZK">39</price>
+			<rate mealRate="average">
+				<avg_rate>0</avg_rate>
+				<rev_number>0</rev_number>
+			</rate>
+		</meal>
+		<meal type="main">
+			<name>Svíčková se šesti</name>
+			<price currency="CZK">149</price>
+			<rate mealRate="average">
+				<avg_rate>0</avg_rate>
+				<rev_number>0</rev_number>
+			</rate>
+		</meal>
+		<meal type="dessert">
+			<name>Bábovka od babičky</name>
+			<price currency="CZK">49</price>
+			<rate mealRate="average">
+				<avg_rate>0</avg_rate>
+				<rev_number>0</rev_number>
+			</rate>
+		</meal>
+	</restaurant>
+	<restaurant id="110">
+		<name>Pařmen</name>
+		<contact>
+			<phone>+420453888311</phone>
+			<email>info@parmen.cz</email>
+			<website>www.parmen.cz</website>
+		</contact>
+		<cuisine>czech</cuisine>
+		<pricing>100</pricing>
+		<capacity>90</capacity>
+		<smoke>true</smoke>
+		<pay_card>false</pay_card>
+		<pay_ticket>false</pay_ticket>
+		<about>Česká čtyřka. Přijd se pokecat s kámošema.</about>
+		<open_hours format="24" data="days">
+			<weekday day="monday" open="false">
+				<from></from>
+				<to></to>
+			</weekday>
+			<weekday day="tuesday" open="false">
+				<from></from>
+				<to></to>
+			</weekday>
+			<weekday day="wednesday" open="true">
+				<from>17:00</from>
+				<to>02:00</to>
+			</weekday>
+			<weekday day="thursday" open="false">
+				<from></from>
+				<to></to>
+			</weekday>
+			<weekday day="friday" open="true">
+				<from>17:00</from>
+				<to>06:00</to>
+			</weekday>
+			<weekday day="saturday" open="true">
+				<from>17:00</from>
+				<to>06:00</to>
+			</weekday>
+			<weekday day="sunday" open="false">
+				<from></from>
+				<to></to>
+			</weekday>
+		</open_hours>
+		<address>
+			<street>Vrkounova 2646</street>
+			<town>Praha</town>
+			<zip>22222</zip>
+			<country>Česká republika</country>
+			<map>
+				<lat>14.010411</lat>
+				<lng>55.621588</lng>
+			</map>
+		</address>
+		<rate restRate="average">
+			<avg_rate>4.5</avg_rate>
+			<rev_number>2</rev_number>
+		</rate>
+		<meal type="starter">
+			<name>Utopenci</name>
+			<price currency="CZK">39</price>
+			<rate mealRate="average">
+				<avg_rate>4.5</avg_rate>
+				<rev_number>2</rev_number>
+			</rate>
+			<review>
+				<user id="114">
+					<name>FrantaV</name>
+					<photo>/photos/114.jpg</photo>
+				</user>
+				<rate>4.0</rate>
+				<comment>Utopenci jsou naprosto bozi.</comment>
+			</review>
+			<review>
+				<user id="1554">
+					<name>KarolinaO</name>
+					<photo>/photos/1554.jpg</photo>
+				</user>
+				<rate>5.0</rate>
+				<comment>Bombový utopenci.</comment>
+			</review>
+		</meal>
+	</restaurant>
+	<restaurant id="760">
+		<name>Mezi domky</name>
+		<contact>
+			<phone>+42044688311</phone>
+			<email>info@md.cz</email>
+			<website>www.md.cz</website>
+		</contact>
+		<cuisine>international</cuisine>
+		<pricing>300</pricing>
+		<capacity>32</capacity>
+		<smoke>false</smoke>
+		<pay_card>true</pay_card>
+		<pay_ticket>false</pay_ticket>
+		<about>Luxusní restaurace uprostřed města Buštěhrad.</about>
+		<open_hours format="24" data="days">
+			<weekday day="monday" open="true">
+				<from>11:00</from>
+				<to>20:00</to>
+			</weekday>
+			<weekday day="tuesday" open="true">
+				<from>10:00</from>
+				<to>22:00</to>
+			</weekday>
+			<weekday day="wednesday" open="true">
+				<from>09:00</from>
+				<to>20:00</to>
+			</weekday>
+			<weekday day="thursday" open="true">
+				<from>10:00</from>
+				<to>22:00</to>
+			</weekday>
+			<weekday day="friday" open="true">
+				<from>09:00</from>
+				<to>00:00</to>
+			</weekday>
+			<weekday day="saturday" open="false">
+				<from></from>
+				<to></to>
+			</weekday>
+			<weekday day="sunday" open="false">
+				<from></from>
+				<to></to>
+			</weekday>
+		</open_hours>
+		<address>
+			<street>Zámková 246</street>
+			<town>Buštěhrad</town>
+			<zip>27343</zip>
+			<country>Česká republika</country>
+			<map>
+				<lat>14.050411</lat>
+				<lng>53.621888</lng>
+			</map>
+		</address>
+		<rate restRate="average">
+			<avg_rate>5</avg_rate>
+			<rev_number>1</rev_number>
+		</rate>
+		<meal type="main">
+			<name>Steak s pepřovou omáčkou</name>
+			<price currency="CZK">299</price>
+			<rate mealRate="average">
+				<avg_rate>5</avg_rate>
+				<rev_number>1</rev_number>
+			</rate>
+			<review>
+				<user id="114">
+					<name>FrantaV</name>
+					<photo>/photos/114.jpg</photo>
+				</user>
+				<rate>5.0</rate>
+				<comment>Dokonalost.</comment>
+			</review>
+		</meal>
+	</restaurant>
+	<restaurant id="910">
+		<name>Hemerkův statek</name>
+		<contact>
+			<phone>+420473888311</phone>
+			<email>info@hemerkac.cz</email>
+			<website>www.hemerkac.cz</website>
+		</contact>
+		<cuisine>italy</cuisine>
+		<pricing>200</pricing>
+		<capacity>66</capacity>
+		<smoke>false</smoke>
+		<pay_card>true</pay_card>
+		<pay_ticket>true</pay_ticket>
+		<about>Restaurace ve Slaném, příjemné posezení s přáteli.</about>
+		<open_hours format="24" data="always">
+			<weekday day="every" open="true">
+				<from>10:00</from>
+				<to>20:00</to>
+			</weekday>
+		</open_hours>
+		<address>
+			<street>Slánská 146</street>
+			<town>Slaný</town>
+			<zip>12345</zip>
+			<country>Česká republika</country>
+			<map>
+				<lat>17.010411</lat>
+				<lng>55.621588</lng>
+			</map>
+		</address>
+		<rate restRate="average">
+			<avg_rate>0</avg_rate>
+			<rev_number>0</rev_number>
+		</rate>
+		<meal type="starter">
+			<name>Pizza Tuna</name>
+			<price currency="CZK">39</price>
+			<rate mealRate="average">
+				<avg_rate>4.0</avg_rate>
+				<rev_number>1</rev_number>
+			</rate>
+			<review>
+				<user id="125">
+					<name>JiriM</name>
+					<photo>/photos/125.jpg</photo>
+				</user>
+				<rate>4.0</rate>
+				<comment>Super pizza.</comment>
+			</review>
+		</meal>
+	</restaurant>
+</restaurants>

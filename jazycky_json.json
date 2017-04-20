@@ -1,0 +1,138 @@
+[
+
+  {
+  "restaurace": "Ham",
+  "kontakt": "+420724688311",
+  "e-mail": "info@ham.cz",
+  "web": "www.ham.cz",
+  "hodnoceni_restaurace": "0",
+  "vari":[
+    
+      {
+      "jidlo": "Rajská polévka",
+      "cena": "39",
+      "hodnoceni_jidlo": "0"
+      },
+      {
+      "jidlo": "Svíčková se šesti",
+      "cena": "149",
+      "hodnoceni_jidlo": "0"
+      },
+      {
+      "jidlo": "Bábovka od babičky",
+      "cena": "49",
+      "hodnoceni_jidlo": "0"
+      }
+    ]
+  },
+  {
+  "restaurace": "Hemerkův statek",
+  "kontakt": "+420473888311",
+  "e-mail": "info@hemerkac.cz",
+  "web": "www.hemerkac.cz",
+  "hodnoceni_restaurace": "0",
+  "vari":[
+    
+      {
+      "jidlo": "Pizza Tuna",
+      "cena": "39",
+      "hodnoceni_jidlo": "4.0",
+      "hodnoceni":[
+      
+        {
+        "pocet_hvezd": "4.0",
+        "komentar": "Super pizza."
+        }
+      ]
+      }
+    ]
+  },
+  {
+  "restaurace": "Mezi domky",
+  "kontakt": "+42044688311",
+  "e-mail": "info@md.cz",
+  "web": "www.md.cz",
+  "hodnoceni_restaurace": "5",
+  "vari":[
+    
+      {
+      "jidlo": "Steak s pepřovou omáčkou",
+      "cena": "299",
+      "hodnoceni_jidlo": "5",
+      "hodnoceni":[
+      
+        {
+        "pocet_hvezd": "5.0",
+        "komentar": "Dokonalost."
+        }
+      ]
+      }
+    ]
+  },
+  {
+  "restaurace": "Pařmen",
+  "kontakt": "+420453888311",
+  "e-mail": "info@parmen.cz",
+  "web": "www.parmen.cz",
+  "hodnoceni_restaurace": "4.5",
+  "vari":[
+    
+      {
+      "jidlo": "Utopenci",
+      "cena": "39",
+      "hodnoceni_jidlo": "4.5",
+      "hodnoceni":[
+      
+        {
+        "pocet_hvezd": "4.0",
+        "komentar": "Utopenci jsou naprosto bozi."
+        },
+        {
+        "pocet_hvezd": "5.0",
+        "komentar": "Bombový utopenci."
+        }
+      ]
+      }
+    ]
+  },
+  {
+  "restaurace": "Rest",
+  "kontakt": "+420722688311",
+  "e-mail": "info@rest.cz",
+  "web": "www.rest.cz",
+  "hodnoceni_restaurace": "4.12",
+  "vari":[
+    
+      {
+      "jidlo": "Pomalu pečený hovězí krk",
+      "cena": "299",
+      "hodnoceni_jidlo": "4.75",
+      "hodnoceni":[
+      
+        {
+        "pocet_hvezd": "4.0",
+        "komentar": "Naprosto úžasné, pochutnal jsem si."
+        },
+        {
+        "pocet_hvezd": "5.0",
+        "komentar": "Dokonalá večeře."
+        },
+        {
+        "pocet_hvezd": "5.0",
+        "komentar": "Lepší jídlo jsem nikdy nejedla, dokonale vychucené... doporučuji!"
+        }
+      ]
+      },
+      {
+      "jidlo": "Salát Caesar",
+      "cena": "149",
+      "hodnoceni_jidlo": "0"
+      },
+      {
+      "jidlo": "Tradiční česnečka",
+      "cena": "49",
+      "hodnoceni_jidlo": "0"
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method ="text"/>
+  <xsl:template match="/">
+    [
+    <xsl:for-each select="restaurants/restaurant">
+      <xsl:sort select="name"/>
+      {
+      "restaurace": "<xsl:value-of select="name"/>",
+      "kontakt": "<xsl:value-of select="contact/phone"/>",
+      "e-mail": "<xsl:value-of select="contact/email"/>",
+      "web": "<xsl:value-of select="contact/website"/>",
+      "hodnoceni_restaurace": "<xsl:value-of select="rate/avg_rate"/>",
+      "vari":[
+        <xsl:for-each select="meal">
+          {
+          "jidlo": "<xsl:value-of select="name"/>",
+          "cena": "<xsl:value-of select="price"/>",
+          "hodnoceni_jidlo": "<xsl:value-of select="rate/avg_rate"/>"<xsl:if test="rate/rev_number > 0">,
+          "hodnoceni":[
+          <xsl:for-each select="review">
+            {
+            "pocet_hvezd": "<xsl:value-of select="rate"/>",
+            "komentar": "<xsl:value-of select="comment"/>"
+            }<xsl:if test="position() != last()">,</xsl:if>
+          </xsl:for-each>
+          ]</xsl:if>
+          }<xsl:if test="position() != last()">,</xsl:if>
+        </xsl:for-each>
+        ]
+      }<xsl:if test="position() != last()">,</xsl:if>
+    </xsl:for-each>
+    ]
+  </xsl:template>
+</xsl:stylesheet>

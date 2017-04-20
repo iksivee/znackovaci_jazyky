@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="restaurants">
+	  <xs:complexType>
+	     <xs:sequence>
+	        <xs:element ref="restaurant" maxOccurs="unbounded" />
+	     </xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+	<xs:element name="restaurant">
+	  <xs:complexType>
+	    <xs:sequence>
+		    <xs:element type="xs:string" name="name"/>
+		    <xs:element name="contact">
+		      <xs:complexType>
+		        <xs:sequence>
+		          <xs:element type="xs:long" name="phone"/>
+		          <xs:element name="email">
+		              <xs:simpleType> 
+					    <xs:restriction base="xs:string"> 
+					      <xs:pattern value="[^@]+@[^\.]+\..+"/> 
+					    </xs:restriction> 
+					  </xs:simpleType> 
+				  </xs:element>
+		          <xs:element type="xs:anyURI" name="website"/>
+		        </xs:sequence>
+		      </xs:complexType>
+		    </xs:element>
+			<xs:element name="cuisine">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="italy"/>
+						<xs:enumeration value="czech"/>
+						<xs:enumeration value="mexican"/>
+						<xs:enumeration value="japan"/>
+						<xs:enumeration value="chinese"/>
+						<xs:enumeration value="american"/>
+						<xs:enumeration value="international"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="pricing">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="100"/>
+						<xs:enumeration value="200"/>
+						<xs:enumeration value="300"/>
+						<xs:enumeration value="400+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element type="xs:integer" name="capacity"/>
+			<xs:element type="xs:boolean" name="smoke"/>
+			<xs:element type="xs:boolean" name="pay_card"/>
+			<xs:element type="xs:boolean" name="pay_ticket"/>
+			<xs:element type="xs:string" name="about"/>
+		    <xs:element name="open_hours">
+		      <xs:complexType>
+		        <xs:sequence>
+		          <xs:element name="weekday" maxOccurs="unbounded" minOccurs="0">
+		            <xs:complexType>
+		              <xs:sequence>
+		                <xs:element type="timeHHMM" name="from"/>
+		                <xs:element type="timeHHMM" name="to"/>
+		              </xs:sequence>
+		              <xs:attribute name="day" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="monday"/>
+									<xs:enumeration value="tuesday"/>
+									<xs:enumeration value="wednesday"/>
+									<xs:enumeration value="thursday"/>
+									<xs:enumeration value="friday"/>
+									<xs:enumeration value="saturday"/>
+									<xs:enumeration value="sunday"/>
+									<xs:enumeration value="every"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+		              <xs:attribute type="xs:boolean" name="open" use="required"/>
+		            </xs:complexType>
+		          </xs:element>
+		        </xs:sequence>
+		        <xs:attribute name="format">
+					<xs:simpleType>
+						<xs:restriction base="xs:byte">
+							<xs:enumeration value="24"/>
+							<xs:enumeration value="12"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+		        <xs:attribute name="data">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="days"/>
+							<xs:enumeration value="always"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+		      </xs:complexType>
+		    </xs:element>
+		    <xs:element name="address">
+		      <xs:complexType>
+		        <xs:sequence>
+		          <xs:element type="xs:string" name="street"/>
+		          <xs:element type="xs:string" name="town"/>
+		          <xs:element type="xs:short" name="zip"/>
+		          <xs:element type="xs:string" name="country"/>
+		          <xs:element name="map">
+		            <xs:complexType>
+		              <xs:sequence>
+		                <xs:element type="xs:double" name="lat"/>
+		                <xs:element type="xs:double" name="lng"/>
+		              </xs:sequence>
+		            </xs:complexType>
+		          </xs:element>
+		        </xs:sequence>
+		      </xs:complexType>
+		    </xs:element>
+		    <xs:element name="rate">
+		      <xs:complexType>
+		        <xs:sequence>
+		         	<xs:element type="rating" name="avg_rate"/>
+		          <xs:element type="xs:byte" name="rev_number"/>
+		        </xs:sequence>
+		        <xs:attribute type="xs:string" name="restRate"/>
+		      </xs:complexType>
+		    </xs:element>
+		    <xs:element name="meal" maxOccurs="unbounded" minOccurs="0">
+		      <xs:complexType>
+		        <xs:sequence>
+		          <xs:element type="xs:string" name="name"/>
+		          <xs:element name="price">
+		            <xs:complexType>
+		              <xs:simpleContent>
+		                <xs:extension base="xs:short">
+		                  <xs:attribute type="xs:string" name="currency" use="optional"/>
+		                </xs:extension>
+		              </xs:simpleContent>
+		            </xs:complexType>
+		          </xs:element>
+		          <xs:element name="rate">
+		            <xs:complexType>
+		              <xs:sequence>
+		                <xs:element type="rating" name="avg_rate"/>
+		                <xs:element type="xs:byte" name="rev_number"/>
+		              </xs:sequence>
+		              <xs:attribute type="xs:string" name="mealRate" use="optional"/>
+		            </xs:complexType>
+		          </xs:element>
+		          <xs:element name="review" maxOccurs="unbounded" minOccurs="0">
+		            <xs:complexType>
+		              <xs:sequence>
+		                <xs:element name="user">
+		                  <xs:complexType>
+		                    <xs:sequence>
+		                      <xs:element type="xs:string" name="name"/>
+		                      <xs:element type="xs:anyURI" name="photo"/>
+		                    </xs:sequence>
+		                    <xs:attribute type="xs:short" name="id" use="required"/>
+		                  </xs:complexType>
+		                </xs:element>
+		                <xs:element name="rate">
+							<xs:simpleType>
+								<xs:restriction base="xs:double">
+									<xs:minInclusive value="0"/>
+									<xs:maxInclusive value="5"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+		                <xs:element type="xs:string" name="comment"/>
+		              </xs:sequence>
+		            </xs:complexType>
+		          </xs:element>
+		        </xs:sequence>
+		        <xs:attribute name="type" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="starter"/>
+							<xs:enumeration value="main"/>
+							<xs:enumeration value="dessert"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+		      </xs:complexType>
+		    </xs:element>
+		  </xs:sequence>
+		  <xs:attribute type="xs:integer" name="id"/>
+	  </xs:complexType>
+	</xs:element>
+	<xs:simpleType name="timeHHMM"> 
+		<xs:restriction base="xs:string"> 
+			<xs:pattern value="[0-2][0-9]:[0-5][0-9]|"/> 
+		</xs:restriction> 
+	</xs:simpleType>
+	<xs:simpleType name="rating">
+		<xs:restriction base="xs:double">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
