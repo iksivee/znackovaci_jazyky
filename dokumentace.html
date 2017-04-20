@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dokumentace foodee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="jumbotron">
+      <h1>Dokumentace</h1>      
+      <p>Foodee - aplikace pro hodnocení jídel v restauracích</p>
+    </div>
+  </header>
+  
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="#welcome">Představení</a></li>
+        <li><a href="#usability">Použití</a></li>
+        <li><a href="#rest">Restaurace</a></li>
+        <li><a href="#meal">Jídla</a></li>
+        <li><a href="#rev">Hodnocení</a></li>
+        <li><a href="#zaver">Závěr</a></li>
+        <li><a href="https://github.com/iksivee/znackovaci_jazyky">GIT - odkaz na projekt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<main> 
+  	<article>
+	  	<section>
+		  <h1 id="welcome">Představení</h1>
+			<p>Hlavní motivací je zjistit kde vaří nejlepší jídlo ve městě a zároveň poskytnout zpětnou vazbu restauracím.</p>
+
+			<p>Cílem by měla být aplikace s rozsáhlou databází všech restaurací, nabízených jídel a hodnocením. Pomocí této aplikace bychom byli schopni rychle a jednoduše najít třeba místo kde dělají nejlepší šunkovou pizzu v okolí. Filtrování v rámci kategorií, typů kuchyní, ceny. Hodnocení jídla by bylo rychlé a intuitivní, správa oblíbených restaurací, které jsme navštívili. Aplikace by byla i zpětnou vazbou pro restaurace. Mohli bychom například říci, co nám na jídle nechutnalo a co bylo naopak výborné.</p>
+	  	</section>
+	  	<section>
+		  <h1 id="usability">Použití</h1>
+			<p>Použití dat pro webové, mobilní aplikace a pro chytré asistenty, data o oblíbených jídlech z vašeho okolí. Ve výsledku můžeme například říci své virtuální asistentce, mám chuť na nejlepší pizzu. Systém pak odešle dotaz do databáze aplikace foodee s polohou uživatele a požadavkem. Systém vrátí výsledky ve formě JSON, kterou si pak aplikace telefonu spracuje jak bude chtít.</p>
+			<p>Výsledkem není obraz databáze, nýbrž chytré výsledky vyhledávání pro uživatelův dotaz. Výhodou je možnost použití dat, jak uzná vývojář třetí strany za vhodné.</p>
+	  	</section>
+    </article>
+
+<section id="rest">
+<h1>Restaurace</h1>
+<p>Obsahuje informace o restauraci, adresa, kontaktní údaje. Dále hodnocení které se počítá na základě hodnocení jídel. </p>
+<table class="table">
+	<thead>
+		<tr>
+        	<th class="col-md-4">Nazev</th>
+        	<th class="col-md-4">Data</th>
+          <th class="col-md-4">Komentář</th>
+    	</tr>
+	</thead>
+    <tbody>
+      <tr>
+        <td>name</td>
+        <td>Rest</td>
+        <td></td>
+      </tr>
+<tr>
+    <td>contact</td>
+    <td></td>
+    <td>Kontaktní údaje restaurace</td>
+</tr>
+<tr>
+    <td>phone</td>
+    <td>+420722688311</td>
+    <td></td>
+</tr>
+<tr>
+    <td>email</td>
+    <td>info@rest.cz</td>
+    <td></td>
+</tr>
+<tr>
+    <td>website</td>
+    <td>www.rest.cz</td>
+    <td></td>
+</tr>
+<tr>
+    <td>cuisine</td>
+    <td>italy</td>
+    <td>Typ kuchyně dle výčtu: italy, czech, mexican, japan, chinese, american, international</td>
+</tr>
+<tr>
+    <td>pricing</td>
+    <td>300</td>
+    <td>Cenová hladina dle výčtu: 100, 200, 300, 400+</td>
+</tr>
+<tr>
+    <td>capacity</td>
+    <td>48</td>
+    <td>Kapacita restaurace</td>
+</tr>
+<tr>
+    <td>smoke</td>
+    <td>false</td>
+    <td>Kuřácká restaurace - smí se zde kouřit? True - ano smí</td>
+</tr>
+<tr>
+    <td>pay_card</td>
+    <td>true</td>
+    <td>Platba kartou</td>
+</tr>
+<tr>
+    <td>pay_ticket</td>
+    <td>true</td>
+    <td>Platba stravenkami</td>
+</tr>
+<tr>
+    <td>about</td>
+    <td>Restaurace s italskou kuchyni.</td>
+    <td>O restauraci</td>
+</tr>
+<tr>
+	  <td>open_hours</td>
+    <td></td>
+    <td>Otevírací doba</td>
+</tr>
+<tr>
+   	<td>weekday</td>
+    <td></td>
+    <td>Ve dne, výčet dnů, nebo vždy, celý týden</td>
+</tr>
+<tr>
+  	<td>from</td>
+    <td>10:00</td>
+    <td>Otevřeno od HH:MM</td>
+</tr>
+<tr>
+	  <td>to</td>
+    <td>20:00</td>
+    <td>Otevřeno do HH:MM</td>
+</tr>
+<tr>
+    <td>address</td>
+    <td></td>
+    <td>Adresa restaurace</td>
+</tr>
+<tr>
+    <td>street</td>
+    <td>Vrchlického 2341</td>
+    <td></td>
+</tr>
+<tr>
+    <td>town</td>
+    <td>Kladno</td>
+    <td></td>
+</tr>
+<tr>
+    <td>zip</td>
+    <td>27201</td>
+    <td></td>
+</tr>
+<tr>
+    <td>country</td>
+    <td>Česká republika</td>
+    <td></td>
+</tr>
+<tr>
+    <td>map</td>
+    <td></td>
+    <td>Mapa pro navigační a zobrazování restaurace na mapě</td>
+</tr>
+<tr>
+    <td>lat</td>
+    <td>14.010611</td>
+    <td></td>
+</tr>
+<tr>
+    <td>lng</td>
+    <td>51.641388</td>
+    <td></td>
+</tr>
+<tr>
+    <td>rate</td>
+    <td>Průměrné hodnocení</td>
+    <td></td>
+</tr>
+<tr>
+    <td>avg_rate</td>
+    <td>4.12</td>
+    <td>Průměrné hodnocení počítané z jídel</td>
+</tr>
+<tr>
+    <td>rev_number</td>
+    <td>94</td>
+    <td>Počet hodnotících</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="meal" >
+<h1>Jídla</h1>
+<p>Informace o jídle, název, cena a jeho hodnocení na základě recenzí.</p>
+<table class="table">
+	<thead>
+		<tr>
+        	<th class="col-md-4">Nazev</th>
+        	<th class="col-md-4">Data</th>
+          <th class="col-md-4">Komentář</th>
+    	</tr>
+	</thead>
+	<tbody>
+		<tr>
+		    <td>meal</td>
+		    <td></td>
+        <td></td>
+		</tr>
+		<tr>
+		    <td>name</td>
+		    <td>Pomalu pečený hovězí krk</td>
+        <td></td>
+		</tr>
+		<tr>
+		    <td>price</td>
+		    <td>299</td>
+        <td></td>
+		</tr>
+		<tr>
+		    <td>rate</td>
+		    <td></td>
+        <td>Hodnocení jídla</td>
+		</tr>
+		<tr>
+		    <td>avg_rate</td>
+		    <td>4.75</td>
+        <td>Průměr hodnocení jídla počítaný z recenzí</td>
+		</tr>
+		<tr>
+		    <td>rev_number</td>
+		    <td>3</td>
+        <td>Počet hodnocení jídla</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+
+<section id="rev">
+<h1>Hodnocení</h1>
+<p>Hodnocen obsahují recenze uživatelů.</p>
+<table id="review" class="table">
+	<thead>
+		<tr>
+        	<th class="col-md-4">Nazev</th>
+        	<th class="col-md-4">Data</th>
+          <th class="col-md-4">Komentář</th>
+    	</tr>
+	</thead>
+	<tbody>
+<tr>
+    <td>review</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>user</td>
+    <td></td>
+    <td>Údaje o uživateli</td>
+</tr>
+<tr>
+    <td>name</td>
+    <td>FrantaV</td>
+    <td>Přezdívka - username uživatele</td>
+</tr>
+<tr>
+    <td>photo</td>
+    <td>/photos/114.jpg</td>
+    <td>Cesta k uložené profilové fotce uživatele</td>
+</tr>
+<tr>
+    <td>rate</td>
+    <td>4.0</td>
+    <td>Počet hvězdiček hodnocení</td>
+</tr>
+<tr>
+    <td>comment</td>
+    <td>Naprosto úžasné, pochutnal jsem si.</td>
+    <td>Komentář hodnocení</td>
+</tr>
+
+    </tbody>
+  </table>
+  </section>
+    <section>
+      <h1 id="zaver">Závěr</h1>
+      <p>Závěrem je připravené XML, schéma a JSON pro komunikační rozhraní mezi aplikací foode (hodnocení jídel v restauracích) s dalšímu službami například Siri v iOS.</p>
+      </section>
+  </main>
+
+  <footer id="footer">
+    <div class="jumbotron">
+      <div class="col-md-4">Čtvrtek 15:45 Sudý</div>
+      <div class="col-md-4">2017</div>
+      <div class="col-md-4">Jiří Čtrnáctý</div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
